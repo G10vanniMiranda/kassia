@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
+/* Paleta e tema global (sem @theme para evitar erro do linter) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	color-scheme: light;
+	--color-brand-bg: #F5F3F2;   /* cinza claro rosado */
+	--color-brand-card: #FFFFFF;
+	--color-brand-ink: #2C2A29;
+	--color-brand-mute: #7A7471;
+	--color-brand-brown: #B6866E;  /* marrom suave */
+	--color-brand-brown2: #9F725A; /* marrom hover */
+	--color-brand-line: #E8E3E0;
+	--color-brand-chip: #F0E7E3;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--color-brand-bg);
+	color: var(--color-brand-ink);
+	font-family: system-ui, sans-serif;
+}
+
+/* Títulos suaves e legíveis */
+h1, h2, h3 {
+	letter-spacing: -0.025em; /* tracking-tight */
+}
+
+/* Parágrafos destaque */
+.lead {
+	color: var(--color-brand-mute);
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.lead {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+}
+
+/* Lead paragraph style (equiv. to text-base md:text-lg text-brand-mute) */
+.lead { color: #7A7471; font-size: 1rem; line-height: 1.5rem; }
+@media (min-width: 768px) {
+	.lead { font-size: 1.125rem; line-height: 1.75rem; }
 }
