@@ -1,103 +1,114 @@
+import Header from "@/components/Header";
+import Section from "@/components/Section";
+import Chip from "@/components/Chip";
+import VideoCard from "@/components/VideoCard";
+import Footer from "@/components/Footer";
+import { brands } from "@/data/brands";
+import { videos } from "@/data/videos";
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="bg-(--color-brand-bg) text-(--color-brand-ink)">
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* HERO / CAPA */}
+      <section className="mx-auto max-w-6xl px-4 pt-10">
+        <div className="grid md:grid-cols-[360px,1fr] gap-10 items-center">
+          <div className="rounded-[18px] border border-(--color-brand-line) bg-(--color-brand-card) shadow-[0_10px_30px_rgba(0,0,0,.06)] p-2">
+            <div className="relative aspect-3/4 rounded-[14px] overflow-hidden">
+              <Image
+                src="/kassia.JPEG"
+                alt="Kássia segurando celular"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+          <div>
+            <h1 className="text-4xl md:text-5xl" style={{ fontFamily: 'var(--font-playfair)' }}>
+              Portfólio
+            </h1>
+            <p className="mt-2 text-(--color-brand-mute)">
+              Storymaker & Videomaker
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* SOBRE MIM */}
+      <Section id="sobre" title="Sobre mim">
+        <div className="space-y-4 max-w-3xl">
+          <p>
+            Sou <strong>Storymaker e Videomaker</strong>, estudante de Administração e apaixonada por
+            transformar momentos e marcas em histórias visuais que conectam.
+          </p>
+          <p>
+            Há um ano e meio no audiovisual, venho criando conteúdos criativos e autênticos que
+            traduzem a essência de cada cliente, sempre com um olhar estratégico e sensibilidade estética.
+          </p>
+          <div className="pt-4">
+            <span className="inline-block select-none text-(--color-brand-mute)">⸻</span>
+          </div>
+        </div>
+      </Section>
+
+      {/* MARCAS */}
+      <Section id="marcas" title="Marcas com que já trabalhei">
+        <div className="flex flex-wrap gap-3">
+          {brands.map((b) => (
+            <Chip key={b}>{b}</Chip>
+          ))}
+        </div>
+        <div className="pt-8">
+          <span className="inline-block select-none text-(--color-brand-mute)">⸻</span>
+        </div>
+      </Section>
+
+      {/* PROJETOS */}
+      <Section
+        id="projetos"
+        title="Projetos"
+        subtitle="Cada projeto é uma nova oportunidade de contar histórias reais."
+      >
+        <p className="lead max-w-3xl">
+          Já produzi desde vídeos promocionais e institucionais até coberturas de eventos e conteúdos
+          para redes sociais, sempre buscando capturar a emoção e a mensagem certa para cada público.
+        </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          {videos.map((v) => (
+            <VideoCard key={v.title} {...v} />
+          ))}
+        </div>
+
+        <div className="pt-10">
+          <span className="inline-block select-none text-(--color-brand-mute)">⸻</span>
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <section id="contato" className="mx-auto max-w-6xl px-4 pb-16">
+        <div className="rounded-[18px] border border-(--color-brand-line) bg-(--color-brand-card) shadow-[0_10px_30px_rgba(0,0,0,.06)] p-8 md:p-10">
+          <h3 className="text-2xl md:text-3xl" style={{ fontFamily: 'var(--font-playfair)' }}>
+            💬 Tenho o pacote ideal pra você!
+          </h3>
+          <p className="lead mt-2">
+            Entre em contato e faça um orçamento comigo — vamos transformar sua ideia em um vídeo incrível.
+          </p>
+          <div className="mt-6">
+            <a
+              href="https://wa.me/5569999787798?text=Ol%C3%A1%20K%C3%A1ssia!%20Quero%20um%20or%C3%A7amento%20de%20v%C3%ADdeo.%20"
+              className="inline-flex items-center px-6 py-3 rounded-[9999px] bg-(--color-brand-brown) text-white hover:bg-(--color-brand-brown2) transition"
+            >
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }
