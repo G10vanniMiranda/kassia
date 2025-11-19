@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: "Kássia Silva — Storymaker & Videomaker",
   description:
     "Portfólio de Kássia Silva: vídeos sensíveis e modernos para marcas que desejam se conectar.",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: ["/icon.svg"],
+  },
   openGraph: {
     title: "Kássia Silva — Portfólio",
     description: "Storymaker & Videomaker.",
