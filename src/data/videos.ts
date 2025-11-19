@@ -60,15 +60,6 @@ export const videos: VideoItem[] = [
     kind: "Reel",
     ratio: "9:16",
   },
-  {
-    id: "cangaty-2",
-    title: "Reel — Cangaty 2",
-    client: "Cangaty",
-    url: "/videos/cangaty/video2.mp4",
-    poster: "/posters/cangaty/video2.jpg",
-    kind: "Reel",
-    ratio: "9:16",
-  },
 
   // charlesOliveira
   {
@@ -111,6 +102,15 @@ export const videos: VideoItem[] = [
     kind: "Reel",
     ratio: "9:16",
   },
+  {
+    id: "india-3",
+    title: "Reel — Índia 3",
+    client: "Índia",
+    url: "/videos/india/video3.mp4",
+    poster: "/posters/india/video3.jpg",
+    kind: "Reel",
+    ratio: "9:16",
+  },
 
   // katiuceSantos
   {
@@ -119,6 +119,15 @@ export const videos: VideoItem[] = [
     client: "Katiuce Santos",
     url: "/videos/katiuceSantos/video1.mp4",
     poster: "/posters/katiuceSantos/video1.jpg",
+    kind: "Reel",
+    ratio: "9:16",
+  },
+  {
+    id: "katiuceSantos-2",
+    title: "Reel — Katiuce Santos 2",
+    client: "Katiuce Santos",
+    url: "/videos/katiuceSantos/video2.mp4",
+    poster: "/posters/katiuceSantos/video2.jpg",
     kind: "Reel",
     ratio: "9:16",
   },
@@ -141,6 +150,24 @@ export const videos: VideoItem[] = [
     client: "Lúcio Samurai",
     url: "/videos/lucioSamurai/video1.mp4",
     poster: "/posters/lucioSamurai/video1.jpg",
+    kind: "Reel",
+    ratio: "9:16",
+  },
+  {
+    id: "lucioSamurai-2",
+    title: "Reel — Lúcio Samurai 2",
+    client: "Lúcio Samurai",
+    url: "/videos/lucioSamurai/video2.mp4",
+    poster: "/posters/lucioSamurai/video2.jpg",
+    kind: "Reel",
+    ratio: "9:16",
+  },
+  {
+    id: "lucioSamurai-3",
+    title: "Reel — Lúcio Samurai 3",
+    client: "Lúcio Samurai",
+    url: "/videos/lucioSamurai/video3.mp4",
+    poster: "/posters/lucioSamurai/video3.jpg",
     kind: "Reel",
     ratio: "9:16",
   },
@@ -257,6 +284,15 @@ export const videos: VideoItem[] = [
     client: "Restaurante Paradzzi",
     url: "/videos/restauranteParadzzi/video1.mp4",
     poster: "/posters/restauranteParadzzi/video1.jpg",
+    kind: "Reel",
+    ratio: "9:16",
+  },
+  {
+    id: "restauranteParadzzi-2",
+    title: "Reel — Restaurante Paradzzi 2",
+    client: "Restaurante Paradzzi",
+    url: "/videos/restauranteParadzzi/video2.mp4",
+    poster: "/posters/restauranteParadzzi/video2.jpg",
     kind: "Reel",
     ratio: "9:16",
   },
