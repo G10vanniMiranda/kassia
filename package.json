@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "git lfs install && git lfs fetch --all && git lfs checkout",
+    "prebuild": "node scripts/prebuild-lfs.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
